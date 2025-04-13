@@ -3,86 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Dice Game</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <section class="page">
-      <div class="palyer-one">
-        <h2>player 1 score</h2>
+      <div class="player-one">
+        <h2>Player 1 Score</h2>
       </div>
       <div class="mid">
-        <div class="dice-contaner">
+        <div class="dice-container">
           <div class="dice">
-            <div class="face one">
-              <div class="dot"></div>
-            </div>
-            <div class="face two">
-              <div class="split">
-                <div class="dot"></div>
-              </div>
-              <div class="split right">
-                <div class="dot"></div>
-              </div>
-            </div>
-            <div class="face three">
-              <div class="split">
-                <div class="dot"></div>
-              </div>
-              <div class="split middle">
-                <div class="dot"></div>
-              </div>
-              <div class="split right">
-                <div class="dot"></div>
-              </div>
-            </div>
-            <div class="face four">
-              <div class="split">
-                <div class="dot"></div>
-                <div class="dot"></div>
-              </div>
-              <div class="split">
-                <div class="dot"></div>
-                <div class="dot"></div>
-              </div>
-            </div>
-            <div class="face five">
-              <div class="split">
-                <div class="dot"></div>
-                <div class="dot"></div>
-              </div>
-              <div class="split middle">
-                <div class="dot"></div>
-              </div>
-              <div class="split">
-                <div class="dot"></div>
-                <div class="dot"></div>
-              </div>
-            </div>
-            <div class="face six">
-              <div class="split">
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-              </div>
-              <div class="split">
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-              </div>
-            </div>
+            <!-- Dice faces as you already had -->
+            <div class="face one"><div class="dot"></div></div>
+            <div class="face two"><div class="split"><div class="dot"></div></div><div class="split right"><div class="dot"></div></div></div>
+            <div class="face three"><div class="split"><div class="dot"></div></div><div class="split middle"><div class="dot"></div></div><div class="split right"><div class="dot"></div></div></div>
+            <div class="face four"><div class="split"><div class="dot"></div><div class="dot"></div></div><div class="split"><div class="dot"></div><div class="dot"></div></div></div>
+            <div class="face five"><div class="split"><div class="dot"></div><div class="dot"></div></div><div class="split middle"><div class="dot"></div></div><div class="split"><div class="dot"></div><div class="dot"></div></div></div>
+            <div class="face six"><div class="split"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div><div class="split"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></div>
           </div>
         </div>
         <div class="btn-container">
-            <button class="roll">Roll</button>
-            <button class="hold">Hold</button>
-            <button class="reset">Reset</button>
+          <button class="roll">Roll</button>
+          <button class="hold">Hold</button>
+          <button class="reset">Reset</button>
         </div>
       </div>
-      <div class="palyer-two">
-        <h2>player 2 score</h2>
+      <div class="player-two">
+        <h2>Player 2 Score</h2>
       </div>
     </section>
+
+    <!-- Game History Table -->
+    <section class="table">
+      <h2>Game History</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Round</th>
+            <th>Player 1</th>
+            <th>Player 2</th>
+          </tr>
+        </thead>
+        <tbody id="history-body">
+          <!-- Filled with JS -->
+        </tbody>
+      </table>
+    </section>
+
     <script src="script.js"></script>
   </body>
 </html>
