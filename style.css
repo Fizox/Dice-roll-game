@@ -1,0 +1,166 @@
+body {
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.page {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+  width: 80%;
+  height: 82vh;
+}
+.dice-contaner {
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+  perspective: 600px;
+  margin: 30px;
+  display: inline-block;
+  position: relative;
+  transform: none;
+}
+
+.dice {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s ease;
+}
+.face {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  border: 10px solid rgb(0, 0, 0);
+}
+
+.dot {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin: 4px;
+  background-color: rgb(0, 0, 0);
+}
+.one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateX(-90deg) translateZ(100px);
+}
+
+.split {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.split.middle {
+  justify-content: center;
+}
+.split.right {
+  justify-content: right;
+}
+.one {
+  transform: rotateY(0deg) translateZ(60px);
+}
+.two {
+  transform: rotateY(180deg) translateZ(60px);
+}
+.three {
+  transform: rotateY(90deg) translateZ(60px);
+}
+.four {
+  transform: rotateY(-90deg) translateZ(60px);
+}
+.five {
+  transform: rotateX(90deg) translateZ(60px);
+}
+.six {
+  transform: rotateX(-90deg) translateZ(60px);
+}
+@keyframes rotate {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+.name {
+  margin-top: 60px;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 24px;
+}
+.control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  width: 45%;
+  padding: 0px 100px;
+}
+#one,
+#two {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 100px;
+}
+#one {
+  background-color: red;
+}
+#two {
+  background-color: green;
+}
+.result {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+.player-one,
+.player-two {
+  display: block;
+  height: 100%;
+
+}
+.player-one h2 {
+  margin-top: 200px;
+}
+.mid{
+    display: flex;
+
+    flex-direction: column;
+    height: 100%;
+}
+.btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.reset , .roll , .hold{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 50px;
+}
